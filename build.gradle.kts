@@ -3,12 +3,10 @@ plugins {
   `maven-publish`
 }
 
-val pkg = "com.github.oliwersdk"
-val ver = "0.0.1"
 val exports = arrayOf("java.base/java.util.concurrent=ALL-UNNAMED")
 
-group = pkg
-version = ver
+group = "com.github.oliwersdk"
+version = "0.0.1"
 
 repositories {
   mavenCentral()
@@ -31,10 +29,8 @@ tasks.test {
 
 publishing {
   publications {
-    create<MavenPublication>("maven") {
-      groupId = pkg
+    create<MavenPublication>("library") {
       artifactId = "sew"
-      version = ver
       from(components["java"])
     }
   }
