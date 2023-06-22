@@ -29,7 +29,7 @@ tasks.test {
 
 publishing {
   publications {
-    create<MavenPublication>("library") {
+    create<MavenPublication>("mavenJava") {
       artifactId = "sew"
       from(components["java"])
     }
